@@ -1,0 +1,535 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>星际业务板块 - 郝鑫星际管理集团</title>
+        <meta name="description" content="郝鑫星际管理集团 - 奇思、迷惑、以及星际级无聊感知系统">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+            .service-card {
+                position: relative;
+                background: #fff;
+                border-radius: 15px;
+                padding: 40px;
+                margin-bottom: 30px;
+                transition: all 0.3s ease;
+                overflow: hidden;
+                z-index: 1;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            }
+            
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            
+            .service-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+            }
+            
+            .service-card::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100px;
+                height: 100px;
+                background: url('img/bg/cube.png') no-repeat;
+                background-size: contain;
+                opacity: 0.05;
+                z-index: -1;
+            }
+            
+            .service-icon {
+                width: 80px;
+                height: 80px;
+                background: rgba(26, 29, 136, 0.05);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                font-size: 36px;
+                color: #1a1d88;
+            }
+            
+            .service-title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: #1a1d88;
+            }
+            
+            .service-desc {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+            
+            .service-feature {
+                margin-bottom: 30px;
+            }
+            
+            .service-feature h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: #1a1d88;
+            }
+            
+            .service-feature ul {
+                list-style: none;
+                padding-left: 0;
+            }
+            
+            .service-feature li {
+                position: relative;
+                padding-left: 25px;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+            
+            .service-feature li::before {
+                content: '✨';
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            
+            .service-cta {
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-block;
+            }
+            
+            .service-cta:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(94, 96, 206, 0.3);
+                color: white;
+            }
+            
+            .service-number {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 60px;
+                font-weight: 900;
+                color: rgba(26, 29, 136, 0.05);
+                z-index: -1;
+            }
+            
+            .warning-box {
+                background: rgba(255, 87, 87, 0.05);
+                border-left: 4px solid #ff5757;
+                padding: 20px;
+                margin: 30px 0;
+                border-radius: 5px;
+            }
+            
+            .warning-box h4 {
+                color: #ff5757;
+                margin-bottom: 10px;
+            }
+            
+            .process-step {
+                position: relative;
+                padding-left: 80px;
+                margin-bottom: 40px;
+            }
+            
+            .process-number {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 60px;
+                height: 60px;
+                background: #1a1d88;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            
+            .process-title {
+                font-size: 20px;
+                margin-bottom: 15px;
+                color: #1a1d88;
+            }
+            
+            .process-desc {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Cursor -->
+        <div class="cursor js-cursor"></div>
+         <!-- header -->
+        <header class="header-area header-three">  
+			  <div id="header-sticky" class="menu-area">
+                <div class="container-fluid">
+                    <div class="second-menu">
+                        <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                           <div class="col-xl-8 col-lg-8 text-center">
+                              
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                             <li class="has-sub">
+                                                <a href="index.html">脑洞发射中心</a>
+                                                 
+                                            </li>
+                                            <li><a href="about.html">郝大鑫是何方神圣</a></li>
+                                            <li class="has-sub"> 
+                                              <a href="services.html">我能帮你整啥活儿</a>
+                                            </li>
+                                            <li><a href="manifesto.html">胡言乱语宣言书</a></li>
+                                            <li><a href="faq.html">灵魂三连问</a></li>
+                                            <li><a href="index.html#portfolio">我的沙雕作品集</a></li>
+                                            <li class="has-sub"><a href="#">平行宇宙入口</a>
+												<ul>
+                                                    <li><a href="index.html#testimonial">真人真事（假的）</a></li>
+                                                    <li><a href="index.html#awards">自封奖项展示区</a></li>
+                                                    <li><a href="prank-entry.html">133厂整蛊现场（已锁定目标）</a></li>
+                                                    <li><a href="cosmic-works.html">灵魂创作中心</a></li>
+                                                  </ul>
+											</li>
+                                            <li><a href="index.html#contact">朕要召见郝大鑫</a></li>                                                  
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>  
+                            <div class="col-xl-3 col-lg-3 text-right d-none d-lg-block">
+                           <div class="header-social">
+                                <span>
+                                    <a href="#" title="Facebook"><i class="fab fa-rocket"></i> 星际传送</a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-meteor"></i> 虚空漫游</a>   
+                                   </span>                    
+                                   <!--  /social media icon redux -->                               
+                            </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mobile-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <!-- main-area -->
+        <main>
+            <!-- breadcrumb-area -->
+            <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/bg/bdrc-bg.png);">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="breadcrumb-wrap text-center">
+                                <div class="breadcrumb-title">
+                                    <h2>💼 星际业务板块 | SERVICES</h2>    
+                                    <div class="breadcrumb-wrap">
+                              
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">宇宙主控大厅</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">星际业务板块</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb-area-end -->
+            
+            <!-- services-area -->
+            <section class="services-area pt-120 pb-90">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50">
+                                <h5><span><img src="img/bg/cube.png" alt="icon01"></span> 所有服务均为</h5>
+                                <h2>"似乎是开玩笑，但实际上没有人能模仿"类型</h2>
+                                <p>我们不是一家企业，我们是"高密度幻想缓释装置"。<br>我们不解决问题，我们制造问题。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="service-card">
+                                <div class="service-number">01</div>
+                                <div class="service-icon">
+                                    <i class="fas fa-camera-retro"></i>
+                                </div>
+                                <h3 class="service-title">星际灵魂头像照</h3>
+                                <p class="service-desc">限地球第一象限使用，拍摄时间维度：0.003秒。拍摄状态指令：请表现你不相信自己是人类那一刻。</p>
+                                
+                                <div class="service-feature">
+                                    <h4>服务特点</h4>
+                                    <ul>
+                                        <li>成片样式：未来档案馆 + 外星申请资料 + 感情图谱色带</li>
+                                        <li>每张照片附带一份"灵魂频率分析报告"</li>
+                                        <li>可选择不同星系滤镜：仙女座、猎户座、天琴座</li>
+                                        <li>照片会在特定日期自动变化表情（你永远不知道是哪一天）</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="warning-box">
+                                    <h4>使用须知</h4>
+                                    <p>本照片可能导致亲友怀疑你已被外星人替换。若出现此情况，请保持微笑并回答："我一直都是这样，只是你们从未真正看见我。"</p>
+                                </div>
+                                
+                                <a href="single-service.html" class="service-cta">预约拍摄</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="service-card">
+                                <div class="service-number">02</div>
+                                <div class="service-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3 class="service-title">脑内宇宙改造计划</h3>
+                                <p class="service-desc">又称"玩笑转正计划"。你有一个很抽象的想法，但没人信你？我来帮你造出它的未来企业官网、团队结构、投资人话术、AI幻象插画。</p>
+                                
+                                <div class="service-feature">
+                                    <h4>服务内容</h4>
+                                    <ul>
+                                        <li>将你的荒谬想法包装成专业商业计划</li>
+                                        <li>为你的想法创建一个看起来已经存在5年的品牌</li>
+                                        <li>生成虚构但令人信服的用户评价和媒体报道</li>
+                                        <li>提供一份"未来回忆录"，记录这个想法如何改变世界</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="warning-box">
+                                    <h4>风险提示</h4>
+                                    <p>有10%的概率你的荒谬想法会在3年内真的被某家公司实现。届时我们会发给你一张"我早就说过"证书。</p>
+                                </div>
+                                
+                                <a href="single-service.html" class="service-cta">开始改造</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="service-card">
+                                <div class="service-number">03</div>
+                                <div class="service-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3 class="service-title">星际投递仪式</h3>
+                                <p class="service-desc">灵魂导航启动专属服务。提供：启动仪式流程、身份生成器、特调"传送失败凭证"纪念卡。适合那些：从未认真生活但总是想认真发疯的人。</p>
+                                
+                                <div class="service-feature">
+                                    <h4>仪式流程</h4>
+                                    <ul>
+                                        <li>第一阶段：现实身份冻结（为期3小时）</li>
+                                        <li>第二阶段：星际身份激活（包含新名字和使命）</li>
+                                        <li>第三阶段：任务下达（一个只有你能完成的荒谬任务）</li>
+                                        <li>第四阶段：返回现实（带着一个无法解释的纪念品）</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="warning-box">
+                                    <h4>注意事项</h4>
+                                    <p>仪式后可能会有1-3天的"现实脱节感"，表现为对日常生活感到陌生和好笑。这是正常现象，请享受这种感觉。</p>
+                                </div>
+                                
+                                <a href="single-service.html" class="service-cta">预约仪式</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="service-card">
+                                <div class="service-number">04</div>
+                                <div class="service-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <h3 class="service-title">故障语录卡片印刷</h3>
+                                <p class="service-desc">从你睡前瞎说的话中选取 7 句，制作成"人类维护须知"卡片。包装格式：怀疑人生版糖纸。</p>
+                                
+                                <div class="service-feature">
+                                    <h4>制作流程</h4>
+                                    <ul>
+                                        <li>记录你在半梦半醒状态下说的话</li>
+                                        <li>由AI筛选出最具"意外哲理"的7句</li>
+                                        <li>设计成看似官方机构发布的警示卡片</li>
+                                        <li>随机分发给陌生人（可选服务）</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="warning-box">
+                                    <h4>效果预警</h4>
+                                    <p>这些卡片有可能被当作某种神秘宗教的预言。若有人开始崇拜你，我们概不负责。</p>
+                                </div>
+                                
+                                <a href="single-service.html" class="service-cta">开始记录</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-50">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50">
+                                <h2>服务流程</h2>
+                                <p>我们的服务流程同样不走寻常路</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="process-step">
+                                <div class="process-number">01</div>
+                                <h4 class="process-title">意识连接</h4>
+                                <p class="process-desc">我们不做常规咨询，而是通过一场"有组织的发呆"来连接我们的意识。你将收到一份奇怪的问卷，问题包括"你最后一次怀疑自己是NPC是什么时候？"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="process-step">
+                                <div class="process-number">02</div>
+                                <h4 class="process-title">概念具现化</h4>
+                                <p class="process-desc">我们会把你脑中最模糊的想法转化为具体的形式。这个过程可能涉及到画画、编程、或者在公园里表演一场即兴舞蹈。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="process-step">
+                                <div class="process-number">03</div>
+                                <h4 class="process-title">现实扭曲</h4>
+                                <p class="process-desc">这是最关键的步骤。我们会创造一个小型的"现实泡泡"，在其中你的想法是完全合理且被接受的。这个泡泡可能以网站、艺术品或社交媒体账号的形式存在。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="process-step">
+                                <div class="process-number">04</div>
+                                <h4 class="process-title">交付与后续</h4>
+                                <p class="process-desc">我们不只是交付成果，而是举行一个"作品诞生仪式"。之后，你会定期收到来自平行宇宙的更新，告诉你在那个宇宙中，你的想法发展得如何。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-50">
+                        <div class="col-lg-12 text-center">
+                            <div class="warning-box">
+                                <h4>最终声明</h4>
+                                <p>我们的服务可能看起来像是某种艺术项目或恶作剧，但我们非常认真地对待每一次合作。如果你在寻找"正常"的服务，请立即关闭此页面并忘记你看到的一切。如果你还在读，那么恭喜你——你是我们的目标客户。</p>
+                            </div>
+                            
+                            <a href="index.html#contact" class="btn ss-btn mt-30">联系我们开始疯狂</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- services-area-end -->
+        </main>
+        <!-- main-area-end -->
+
+        <!-- footer -->
+        <footer class="footer-bg footer-p">
+            <div class="footer-top p-relative fix">
+               
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                               <div class="section-title p-relative mb-50 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                                 <div class="f-logo">
+                                      <img src="img/logo/logo.png" alt="img">
+                                </div>
+                                <p>"每一个不想上班的清晨，都是觉醒的试炼。我们相信一切皆虚构，但我们认真地编。"</p>
+                            </div>
+                             <div class="footer-social mt-10 mb-120 wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s"> 
+                                    <a href="#"><i class="fab fa-rocket"></i></a>
+                                    <a href="#"><i class="fab fa-meteor"></i></a>
+                                    <a href="#"><i class="fab fa-space-shuttle"></i></a>
+                                    <a href="#"><i class="fab fa-galactic-republic"></i></a>
+                                </div>    
+                           
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="copyright-wrap">
+                <div class="container">
+                    <div class="row align-items-center">                       
+                        <div class="col-lg-6">
+                          <div class="copy-text">
+                                 © 2025 郝鑫星际管理集团 - 本公司已与现实脱钩     
+                            </div>
+                        </div>                       
+                       <div class="col-lg-6 text-right text-xl-right">
+                           <ul>
+                               <li><a href="#" class="hover-text" title="你真闲，居然看页脚">星际职位</a></li>
+                               <li><a href="#">灵魂退款政策</a></li>
+                               <li><a href="#">宇宙洞察</a></li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html> 

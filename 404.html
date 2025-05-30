@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>404 - 页面飞出银河系 | 郝鑫星际管理集团</title>
+        <meta name="description" content="郝鑫星际管理集团 - 奇思、迷惑、以及星际级无聊感知系统">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+            .space-404 {
+                background: linear-gradient(to bottom, #0c0c2a, #1a1d88);
+                position: relative;
+                overflow: hidden;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .floating-cursor {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                animation: float 8s ease-in-out infinite;
+                opacity: 0.7;
+            }
+            .spaceship-flipped {
+                transform: rotate(180deg);
+                max-width: 300px;
+                animation: wobble 5s ease-in-out infinite;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(10deg); }
+                100% { transform: translateY(0px) rotate(0deg); }
+            }
+            @keyframes wobble {
+                0% { transform: rotate(175deg) translateX(0px); }
+                25% { transform: rotate(185deg) translateX(10px); }
+                50% { transform: rotate(175deg) translateX(0px); }
+                75% { transform: rotate(180deg) translateX(-10px); }
+                100% { transform: rotate(175deg) translateX(0px); }
+            }
+            .star {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: white;
+                border-radius: 50%;
+            }
+            .error-text {
+                color: white;
+                text-align: center;
+                z-index: 10;
+                max-width: 600px;
+                padding: 30px;
+            }
+            .error-text h1 {
+                font-size: 120px;
+                margin-bottom: 0;
+                font-weight: 700;
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .error-text h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                color: #fff;
+            }
+            .error-text p {
+                font-size: 18px;
+                margin-bottom: 30px;
+                color: #ccc;
+            }
+            .cosmic-btn {
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-block;
+                margin-top: 20px;
+            }
+            .cosmic-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(94, 96, 206, 0.3);
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Cursor -->
+        <div class="cursor js-cursor"></div>
+
+        <main class="space-404">
+            <!-- 创建50颗星星 -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    for(let i = 0; i < 50; i++) {
+                        let star = document.createElement('div');
+                        star.className = 'star';
+                        star.style.left = Math.random() * 100 + 'vw';
+                        star.style.top = Math.random() * 100 + 'vh';
+                        star.style.width = Math.random() * 3 + 1 + 'px';
+                        star.style.height = star.style.width;
+                        star.style.opacity = Math.random() * 0.8 + 0.2;
+                        document.querySelector('.space-404').appendChild(star);
+                    }
+                });
+            </script>
+            
+            <img src="img/slider/main.png" class="spaceship-flipped" alt="翻倒的太空船">
+            <img src="img/bg/cursor.png" class="floating-cursor" alt="漂浮的鼠标" style="top: 40%; left: 60%;">
+            <img src="img/bg/cursor.png" class="floating-cursor" alt="漂浮的鼠标" style="top: 30%; left: 30%; animation-delay: 2s;">
+            
+            <div class="error-text">
+                <h1>404</h1>
+                <h2>你试图访问的页面已飞出银河</h2>
+                <p>建议闭眼3秒，深呼吸，然后返回地球。<br>或者，你可以继续探索未知的宇宙奥秘。</p>
+                <a href="index.html" class="cosmic-btn">召唤我回主控大厅</a>
+            </div>
+        </main>
+
+        <!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html> 

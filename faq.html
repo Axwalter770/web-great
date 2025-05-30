@@ -1,0 +1,569 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>常见问题 - 郝鑫星际管理集团</title>
+        <meta name="description" content="郝鑫星际管理集团 - 奇思、迷惑、以及星际级无聊感知系统">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+            .faq-section {
+                position: relative;
+                padding: 80px 0;
+                overflow: hidden;
+            }
+            
+            .faq-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('img/bg/dots-bg.png');
+                opacity: 0.05;
+                z-index: -1;
+            }
+            
+            .faq-card {
+                background: #fff;
+                border-radius: 15px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
+            }
+            
+            .faq-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            
+            .faq-category {
+                display: inline-block;
+                padding: 5px 15px;
+                background: rgba(94, 96, 206, 0.1);
+                color: #5e60ce;
+                border-radius: 30px;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            
+            .faq-question {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: #1a1d88;
+            }
+            
+            .faq-answer {
+                font-size: 16px;
+                line-height: 1.8;
+                color: #555;
+            }
+            
+            .faq-highlight {
+                background: rgba(255, 193, 7, 0.2);
+                padding: 2px 5px;
+                border-radius: 4px;
+            }
+            
+            .faq-note {
+                background: rgba(94, 96, 206, 0.05);
+                border-left: 4px solid #5e60ce;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 5px;
+                font-size: 15px;
+                font-style: italic;
+            }
+            
+            .faq-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+                justify-content: center;
+            }
+            
+            .faq-tab {
+                padding: 10px 25px;
+                background: #fff;
+                border-radius: 30px;
+                margin: 5px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            }
+            
+            .faq-tab.active {
+                background: #1a1d88;
+                color: white;
+            }
+            
+            .faq-tab:hover {
+                background: rgba(26, 29, 136, 0.1);
+            }
+            
+            .faq-tab.active:hover {
+                background: #1a1d88;
+            }
+            
+            .faq-search {
+                position: relative;
+                margin-bottom: 40px;
+            }
+            
+            .faq-search input {
+                width: 100%;
+                padding: 15px 20px;
+                border: none;
+                border-radius: 50px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+                font-size: 16px;
+                padding-right: 50px;
+            }
+            
+            .faq-search button {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                font-size: 20px;
+                color: #1a1d88;
+                cursor: pointer;
+            }
+            
+            .faq-contact {
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+                padding: 40px;
+                border-radius: 15px;
+                color: white;
+                margin-top: 50px;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .faq-contact::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 200px;
+                background: url('img/bg/cube.png') no-repeat;
+                background-size: contain;
+                opacity: 0.1;
+                z-index: 0;
+            }
+            
+            .faq-contact h3 {
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            
+            .faq-contact p {
+                font-size: 16px;
+                margin-bottom: 20px;
+                opacity: 0.9;
+            }
+            
+            .faq-contact-btn {
+                background: white;
+                color: #1a1d88;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-block;
+            }
+            
+            .faq-contact-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+                color: #1a1d88;
+            }
+            
+            .faq-icon {
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Cursor -->
+        <div class="cursor js-cursor"></div>
+         <!-- header -->
+        <header class="header-area header-three">  
+			  <div id="header-sticky" class="menu-area">
+                <div class="container-fluid">
+                    <div class="second-menu">
+                        <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                           <div class="col-xl-8 col-lg-8 text-center">
+                              
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                             <li class="has-sub">
+                                                <a href="index.html">脑洞发射中心</a>
+                                                 
+                                            </li>
+                                            <li><a href="about.html">郝大鑫是何方神圣</a></li>
+                                            <li class="has-sub"> 
+                                              <a href="services.html">我能帮你整啥活儿</a>
+                                            </li>
+                                            <li><a href="manifesto.html">胡言乱语宣言书</a></li>
+                                            <li><a href="faq.html">灵魂三连问</a></li>
+                                            <li><a href="index.html#portfolio">我的沙雕作品集</a></li>
+                                            <li class="has-sub"><a href="#">平行宇宙入口</a>
+												<ul>
+                                                    <li><a href="index.html#testimonial">真人真事（假的）</a></li>
+                                                    <li><a href="index.html#awards">自封奖项展示区</a></li>
+                                                    <li><a href="prank-entry.html">133厂整蛊现场（已锁定目标）</a></li>
+                                                    <li><a href="cosmic-works.html">灵魂创作中心</a></li>
+                                                  </ul>
+											</li>
+                                            <li><a href="index.html#contact">朕要召见郝大鑫</a></li>                                                  
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>  
+                            <div class="col-xl-3 col-lg-3 text-right d-none d-lg-block">
+                           <div class="header-social">
+                                <span>
+                                    <a href="#" title="Facebook"><i class="fab fa-rocket"></i> 星际传送</a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-meteor"></i> 虚空漫游</a>   
+                                   </span>                    
+                                   <!--  /social media icon redux -->                               
+                            </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mobile-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <!-- main-area -->
+        <main>
+            <!-- breadcrumb-area -->
+            <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/bg/bdrc-bg.png);">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="breadcrumb-wrap text-center">
+                                <div class="breadcrumb-title">
+                                    <h2>❓ 常见问题 | FAQ</h2>    
+                                    <div class="breadcrumb-wrap">
+                              
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">宇宙主控大厅</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">常见问题</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb-area-end -->
+            
+            <!-- faq-area -->
+            <section class="faq-section pt-120 pb-90">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50">
+                                <h5><span><img src="img/bg/cube.png" alt="icon01"></span> 星际疑问解答</h5>
+                                <h2>你有问题，我们有更多问题</h2>
+                                <p>以下是我们收到的一些常见问题，以及我们尝试回答它们的方式。<br>如果你的问题不在这里，那么恭喜你——你的问题足够特别，值得直接联系我们。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="faq-search">
+                                <input type="text" placeholder="搜索你的疑问...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="faq-tabs">
+                                <div class="faq-tab active">所有问题</div>
+                                <div class="faq-tab">关于我们</div>
+                                <div class="faq-tab">服务相关</div>
+                                <div class="faq-tab">意识同步</div>
+                                <div class="faq-tab">付款问题</div>
+                                <div class="faq-tab">存在危机</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="faq-card">
+                                <span class="faq-category">关于我们</span>
+                                <h3 class="faq-question">郝鑫星际管理集团是真实存在的公司吗？</h3>
+                                <div class="faq-answer">
+                                    <p>这个问题的答案取决于你如何定义"真实"和"存在"。从法律意义上讲，我们可能存在也可能不存在。从哲学意义上讲，我们的存在比大多数"真实"公司更真实，因为我们承认自己的虚构性。</p>
+                                    <p>如果你能看到这个网站，能阅读这些文字，那么在某种程度上，我们确实存在于你的意识中。这不就是一种存在形式吗？</p>
+                                    <div class="faq-note">
+                                        注：如果你在阅读这段话时感到一丝存在危机，请不要担心，这是正常反应。
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-card">
+                                <span class="faq-category">服务相关</span>
+                                <h3 class="faq-question">你们的服务到底是做什么的？</h3>
+                                <div class="faq-answer">
+                                    <p>我们提供的不是传统意义上的"服务"，而是一种体验，一种视角转换，一种意识扩展。</p>
+                                    <p>具体来说，我们帮助你：</p>
+                                    <ul>
+                                        <li>看到你从未注意到的可能性</li>
+                                        <li>将你脑中模糊的想法具象化</li>
+                                        <li>创造一个小型的"现实泡泡"，在其中你的荒谬想法是完全合理的</li>
+                                        <li>体验一种全新的身份和存在方式</li>
+                                    </ul>
+                                    <p>简而言之，我们不解决问题，我们创造更有趣的问题。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-card">
+                                <span class="faq-category">意识同步</span>
+                                <h3 class="faq-question">什么是"意识同步"？这会改变我的思维方式吗？</h3>
+                                <div class="faq-answer">
+                                    <p>"意识同步"是我们独创的一种体验方式，它通过特定的视觉、听觉和概念刺激，暂时改变你的认知框架，让你能够从全新的角度看待熟悉的事物。</p>
+                                    <p>这不会永久改变你的思维方式，除非你希望它这样做。它更像是给你的大脑戴上一副特殊的眼镜，让你暂时看到不同的现实层面。</p>
+                                    <div class="faq-note">
+                                        警告：部分客户报告称，在体验后他们无法再像以前那样认真对待某些社会习俗和规范。这被认为是一种积极的副作用。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="faq-card">
+                                <span class="faq-category">服务相关</span>
+                                <h3 class="faq-question">你们的服务价格是多少？</h3>
+                                <div class="faq-answer">
+                                    <p>我们不使用传统的定价模式，因为我们相信价值是主观的，且随时间变化。</p>
+                                    <p>我们的交换方式包括但不限于：</p>
+                                    <ul>
+                                        <li>金钱（但金额由你决定，基于你认为体验的价值）</li>
+                                        <li>创意交换（你为我们提供一个有趣的想法）</li>
+                                        <li>时间交换（你参与我们的一个实验）</li>
+                                        <li>故事交换（你分享一个只有你知道的故事）</li>
+                                    </ul>
+                                    <p>在联系我们时，请说明你倾向的交换方式。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-card">
+                                <span class="faq-category">存在危机</span>
+                                <h3 class="faq-question">我怎么确定我不是一个NPC？</h3>
+                                <div class="faq-answer">
+                                    <p>首先，恭喜你提出这个问题！只有非NPC才会质疑自己是否是NPC。</p>
+                                    <p>但更深层次地说，"NPC"和"玩家"的二分法本身就是一种限制性思维。我们更喜欢将每个人视为"潜在的主角"，只是有些人选择了接受剧本，有些人选择了重写剧本。</p>
+                                    <p>如果你正在阅读这段文字并感到困惑，那么你已经在向"主角"方向移动了。</p>
+                                    <div class="faq-note">
+                                        提示：尝试做一些剧本中没有写到的事情。如果世界没有崩溃，恭喜你，你可能不是NPC。
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-card">
+                                <span class="faq-category">付款问题</span>
+                                <h3 class="faq-question">你们接受什么支付方式？</h3>
+                                <div class="faq-answer">
+                                    <p>我们接受所有常规支付方式，包括：</p>
+                                    <ul>
+                                        <li>信用卡/借记卡</li>
+                                        <li>PayPal</li>
+                                        <li>加密货币</li>
+                                        <li>银行转账</li>
+                                        <li>现实扭曲代币（这是我们的内部货币，可通过完成特定任务获得）</li>
+                                    </ul>
+                                    <p>我们也接受非常规支付方式，如：</p>
+                                    <ul>
+                                        <li>有趣的故事</li>
+                                        <li>创意交换</li>
+                                        <li>你童年的一个重要记忆（不用担心，我们会归还）</li>
+                                    </ul>
+                                    <div class="faq-highlight">特别说明：所有付款都是虚构的，就像钱的价值一样。</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="faq-contact">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-8">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-question"></i>
+                                        </div>
+                                        <h3>还有其他问题？</h3>
+                                        <p>如果你的问题没有在这里得到回答，或者你的问题导致了更多问题（这很正常），请直接联系我们。我们的回答可能不会解决你的问题，但肯定会让你忘记你最初的问题是什么。</p>
+                                    </div>
+                                    <div class="col-lg-4 text-lg-right">
+                                        <a href="index.html#contact" class="faq-contact-btn">联系我们</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-50">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50">
+                                <h2>元问题</h2>
+                                <p>关于问题本身的问题</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="faq-card">
+                                <span class="faq-category">元问题</span>
+                                <h3 class="faq-question">为什么我们总是寻找答案？</h3>
+                                <div class="faq-answer">
+                                    <p>人类似乎有一种根深蒂固的需求，希望世界是可理解的、有秩序的。我们寻找答案，是因为我们无法忍受不确定性。</p>
+                                    <p>但在郝鑫星际管理集团，我们认为问题本身往往比答案更有价值。好问题能打开新的思维空间，而答案往往会关闭这些空间。</p>
+                                    <p>下次当你急于寻找答案时，试着多停留在问题上一会儿。享受那种不知道的感觉。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="faq-card">
+                                <span class="faq-category">元问题</span>
+                                <h3 class="faq-question">这个FAQ页面是真实的吗？</h3>
+                                <div class="faq-answer">
+                                    <p>你正在阅读它，所以从这个意义上说，它是真实的。它存在于你的浏览器中，存在于你的感知中。</p>
+                                    <p>但如果你的问题是"这些问题真的是人们经常问的吗？"——答案是既是也不是。这些问题代表了人们可能会问的问题，也代表了人们应该问但还没有想到要问的问题。</p>
+                                    <p>在某种程度上，所有的FAQ页面都是对未来的一种预测，一种对可能发生的对话的模拟。</p>
+                                    <div class="faq-note">
+                                        思考实验：如果没有人问过这些问题，它们还能被称为"常见问题"吗？如果你因为读了这个页面而开始思考这些问题，那么它们是不是就变成了常见问题？
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- faq-area-end -->
+        </main>
+        <!-- main-area-end -->
+
+        <!-- footer -->
+        <footer class="footer-bg footer-p">
+            <div class="footer-top p-relative fix">
+               
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                               <div class="section-title p-relative mb-50 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                                 <div class="f-logo">
+                                      <img src="img/logo/logo.png" alt="img">
+                                </div>
+                                <p>"每一个不想上班的清晨，都是觉醒的试炼。我们相信一切皆虚构，但我们认真地编。"</p>
+                            </div>
+                             <div class="footer-social mt-10 mb-120 wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s"> 
+                                    <a href="#"><i class="fab fa-rocket"></i></a>
+                                    <a href="#"><i class="fab fa-meteor"></i></a>
+                                    <a href="#"><i class="fab fa-space-shuttle"></i></a>
+                                    <a href="#"><i class="fab fa-galactic-republic"></i></a>
+                                </div>    
+                           
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="copyright-wrap">
+                <div class="container">
+                    <div class="row align-items-center">                       
+                        <div class="col-lg-6">
+                          <div class="copy-text">
+                                 © 2025 郝鑫星际管理集团 - 本公司已与现实脱钩     
+                            </div>
+                        </div>                       
+                       <div class="col-lg-6 text-right text-xl-right">
+                           <ul>
+                               <li><a href="#" class="hover-text" title="你真闲，居然看页脚">星际职位</a></li>
+                               <li><a href="#">灵魂退款政策</a></li>
+                               <li><a href="#">宇宙洞察</a></li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html> 

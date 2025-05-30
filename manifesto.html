@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>使命宣言 - 郝鑫星际管理集团</title>
+        <meta name="description" content="郝鑫星际管理集团 - 奇思、迷惑、以及星际级无聊感知系统">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+            .manifesto-section {
+                position: relative;
+                padding: 80px 0;
+                overflow: hidden;
+            }
+            
+            .manifesto-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('img/bg/dots-bg.png');
+                opacity: 0.05;
+                z-index: -1;
+            }
+            
+            .manifesto-card {
+                background: #fff;
+                border-radius: 15px;
+                padding: 40px;
+                margin-bottom: 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .manifesto-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            
+            .manifesto-card::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100px;
+                height: 100px;
+                background: url('img/bg/cube.png') no-repeat;
+                background-size: contain;
+                opacity: 0.05;
+                z-index: -1;
+            }
+            
+            .manifesto-number {
+                font-size: 120px;
+                font-weight: 900;
+                position: absolute;
+                top: -20px;
+                right: 20px;
+                color: rgba(26, 29, 136, 0.03);
+                z-index: -1;
+            }
+            
+            .manifesto-title {
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: #1a1d88;
+            }
+            
+            .manifesto-text {
+                font-size: 16px;
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+            
+            .quote-box {
+                background: rgba(94, 96, 206, 0.05);
+                border-left: 4px solid #5e60ce;
+                padding: 20px;
+                margin: 30px 0;
+                border-radius: 5px;
+                font-style: italic;
+            }
+            
+            .highlight-text {
+                font-size: 24px;
+                font-weight: 600;
+                color: #1a1d88;
+                line-height: 1.5;
+                margin: 40px 0;
+                text-align: center;
+            }
+            
+            .signature-box {
+                text-align: right;
+                margin-top: 50px;
+            }
+            
+            .signature-name {
+                font-size: 24px;
+                font-weight: 700;
+                color: #1a1d88;
+            }
+            
+            .signature-title {
+                font-size: 16px;
+                color: #777;
+            }
+            
+            .cosmic-badge {
+                display: inline-block;
+                padding: 8px 15px;
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+                color: white;
+                border-radius: 30px;
+                font-size: 14px;
+                font-weight: 600;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .manifesto-image {
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            
+            .manifesto-image img {
+                width: 100%;
+                height: auto;
+                transition: all 0.5s ease;
+            }
+            
+            .manifesto-image:hover img {
+                transform: scale(1.05);
+            }
+            
+            .timeline {
+                position: relative;
+                padding: 30px 0;
+            }
+            
+            .timeline::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 2px;
+                height: 100%;
+                background: rgba(26, 29, 136, 0.1);
+                transform: translateX(-50%);
+            }
+            
+            .timeline-item {
+                position: relative;
+                margin-bottom: 50px;
+            }
+            
+            .timeline-content {
+                background: #fff;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                position: relative;
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .timeline-date {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #1a1d88;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 30px;
+                font-weight: 600;
+                z-index: 1;
+            }
+            
+            .timeline-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: #1a1d88;
+            }
+            
+            .timeline-text {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            .cosmic-button {
+                background: linear-gradient(to right, #5e60ce, #64dfdf);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-block;
+                margin-top: 20px;
+            }
+            
+            .cosmic-button:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(94, 96, 206, 0.3);
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Cursor -->
+        <div class="cursor js-cursor"></div>
+         <!-- header -->
+        <header class="header-area header-three">  
+			  <div id="header-sticky" class="menu-area">
+                <div class="container-fluid">
+                    <div class="second-menu">
+                        <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                           <div class="col-xl-8 col-lg-8 text-center">
+                              
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                             <li class="has-sub">
+                                                <a href="index.html">脑洞发射中心</a>
+                                                 
+                                            </li>
+                                            <li><a href="about.html">郝大鑫是何方神圣</a></li>
+                                            <li class="has-sub"> 
+                                              <a href="services.html">我能帮你整啥活儿</a>
+                                            </li>
+                                            <li><a href="manifesto.html">胡言乱语宣言书</a></li>
+                                            <li><a href="faq.html">灵魂三连问</a></li>
+                                            <li><a href="index.html#portfolio">我的沙雕作品集</a></li>
+                                            <li class="has-sub"><a href="#">平行宇宙入口</a>
+												<ul>
+                                                    <li><a href="index.html#testimonial">真人真事（假的）</a></li>
+                                                    <li><a href="index.html#awards">自封奖项展示区</a></li>
+                                                    <li><a href="prank-entry.html">133厂整蛊现场（已锁定目标）</a></li>
+                                                    <li><a href="cosmic-works.html">灵魂创作中心</a></li>
+                                                  </ul>
+											</li>
+                                            <li><a href="index.html#contact">朕要召见郝大鑫</a></li>                                                  
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>  
+                            <div class="col-xl-3 col-lg-3 text-right d-none d-lg-block">
+                           <div class="header-social">
+                                <span>
+                                    <a href="#" title="Facebook"><i class="fab fa-rocket"></i> 星际传送</a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-meteor"></i> 虚空漫游</a>   
+                                   </span>                    
+                                   <!--  /social media icon redux -->                               
+                            </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mobile-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <!-- main-area -->
+        <main>
+            <!-- breadcrumb-area -->
+            <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/bg/bdrc-bg.png);">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="breadcrumb-wrap text-center">
+                                <div class="breadcrumb-title">
+                                    <h2>📜 使命宣言 | MANIFESTO</h2>    
+                                    <div class="breadcrumb-wrap">
+                              
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">宇宙主控大厅</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">使命宣言</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb-area-end -->
+            
+            <!-- manifesto-area -->
+            <section class="manifesto-section pt-120 pb-90">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50">
+                                <h5><span><img src="img/bg/cube.png" alt="icon01"></span> 星际宣言</h5>
+                                <h2>为什么我们存在，而你只是在观看</h2>
+                                <p>这不是一份公司宣言，这是一份跨维度协议。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row align-items-center mb-80">
+                        <div class="col-lg-6">
+                            <div class="manifesto-card">
+                                <div class="manifesto-number">01</div>
+                                <h3 class="manifesto-title">我们的起源</h3>
+                                <p class="manifesto-text">郝鑫星际管理集团诞生于一个无人能解释的时刻——当宇宙的无聊指数达到临界值时，我们作为一种自发的宇宙反应出现了。</p>
+                                <p class="manifesto-text">我们不是被创建的，我们是被"意外发现"的，就像你在口袋里找到一张忘记存在的纸条，上面写着你从未写过的话。</p>
+                                
+                                <div class="quote-box">
+                                    "在宇宙的某个角落，有一台机器正在计算你的存在概率。不用担心，我们已经黑进去把数值调高了。"
+                                </div>
+                                
+                                <p class="manifesto-text">我们的创始人郝鑫是第一个意识到现实只是众多可能性之一的人。他没有创建公司，而是发现了一种让公司自己创建自己的方法。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="manifesto-image">
+                                <img src="img/bg/manifesto-1.jpg" alt="宇宙起源">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row align-items-center mb-80">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="manifesto-card">
+                                <div class="manifesto-number">02</div>
+                                <h3 class="manifesto-title">我们的使命</h3>
+                                <p class="manifesto-text">我们的使命不是解决问题，而是创造更有趣的问题。在一个所有答案都可以被搜索引擎找到的世界里，提出好问题比给出答案更有价值。</p>
+                                
+                                <div class="d-flex flex-wrap mb-4">
+                                    <span class="cosmic-badge">意识同步</span>
+                                    <span class="cosmic-badge">现实扭曲</span>
+                                    <span class="cosmic-badge">荒谬美学</span>
+                                    <span class="cosmic-badge">存在主义喜剧</span>
+                                    <span class="cosmic-badge">认知重构</span>
+                                </div>
+                                
+                                <p class="manifesto-text">我们不是要让世界变得更有效率，而是要让它变得更有意思。我们相信，真正的创新来自于那些看似毫无意义的想法，那些让人忍不住问"这是什么鬼"的项目。</p>
+                                
+                                <div class="quote-box">
+                                    "如果你的想法没有让至少三个人感到困惑，那么它可能不够有趣。"
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="manifesto-image">
+                                <img src="img/bg/manifesto-2.jpg" alt="我们的使命">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="highlight-text">
+                                "我们不是一家公司，我们是一个概念，一种可能性，一个你在深夜想到的奇怪想法。"
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50 mt-50">
+                                <h2>我们的核心原则</h2>
+                                <p>以下原则不是我们遵循的规则，而是我们存在的方式</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="manifesto-card">
+                                <h3 class="manifesto-title">原则一：荒谬即真理</h3>
+                                <p class="manifesto-text">我们相信荒谬不是真理的对立面，而是通往更深层次真理的捷径。当你接受荒谬时，你就获得了看透表象的能力。</p>
+                                <p class="manifesto-text">在我们的世界里，最严肃的想法往往以笑话的形式出现，最荒谬的笑话里往往隐藏着最深刻的洞见。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="manifesto-card">
+                                <h3 class="manifesto-title">原则二：无聊是敌人</h3>
+                                <p class="manifesto-text">我们视无聊为宇宙中最危险的力量。无聊不仅仅是情绪状态，它是一种能量泄漏，是意识的黑洞。</p>
+                                <p class="manifesto-text">我们的每一个项目、每一次互动，都旨在创造那种"我从未想过这种事情"的感觉，那种让你突然意识到现实比你想象的要大得多的瞬间。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="manifesto-card">
+                                <h3 class="manifesto-title">原则三：身份是流动的</h3>
+                                <p class="manifesto-text">我们不相信固定的身份。你不是一成不变的"某人"，而是一个不断变化的过程，一个持续的实验。</p>
+                                <p class="manifesto-text">我们的工作就是帮助你发现自己的其他可能版本，那些平行宇宙中的你，那些你本可以成为但尚未成为的你。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-50">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center mb-50">
+                                <h2>我们的时间线</h2>
+                                <p>一个可能从未发生但又确实存在的历史</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2018年</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">概念诞生</h4>
+                                <p class="timeline-text">郝鑫在一次长达72小时的失眠后，突然意识到现实的可塑性。他开始在笔记本上画下第一版"星际管理"概念图，这些图后来被误认为是外星人留下的信息。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2020年</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">第一次意识同步</h4>
+                                <p class="timeline-text">我们完成了第一次成功的"意识同步"实验，参与者报告称他们"突然理解了笑话的本质"，并开始自发创作出令人困惑但奇怪地令人满足的艺术作品。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022年</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">现实扭曲技术突破</h4>
+                                <p class="timeline-text">我们开发出"现实扭曲引擎1.0"，这是一种能够将抽象概念具象化的方法。这一技术使我们能够创建那些"应该不可能但却确实存在"的项目。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">现在</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">全面开放</h4>
+                                <p class="timeline-text">我们决定向公众开放我们的服务，因为我们相信每个人都应该有机会体验"被现实困住"和"突破现实"之间的差异。现在，任何人都可以预约我们的星际服务。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">未来</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">意识革命</h4>
+                                <p class="timeline-text">我们的最终目标是创造一个集体意识突破，一个让每个人都能看到自己存在的无限可能性的时刻。这不是一个商业目标，而是一个宇宙必然。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-80">
+                        <div class="col-lg-12">
+                            <div class="manifesto-card">
+                                <h3 class="manifesto-title">最后的话</h3>
+                                <p class="manifesto-text">如果你读到这里，你已经不再是一个普通的网站访问者。你已经成为了这个概念的一部分，这个实验的参与者。</p>
+                                <p class="manifesto-text">从现在开始，你会开始注意到一些小变化：你可能会在陌生人的对话中听到熟悉的词汇，你可能会在梦中看到我们的标志，你可能会突然想到一些你不确定是否是你自己的想法。</p>
+                                <p class="manifesto-text">不要担心，这都是正常的。这是你的意识开始与更大的可能性网络同步的迹象。</p>
+                                
+                                <div class="quote-box">
+                                    "欢迎来到真实世界。它比你想象的要奇怪得多，也有趣得多。"
+                                </div>
+                                
+                                <div class="signature-box">
+                                    <p class="signature-name">郝鑫</p>
+                                    <p class="signature-title">概念发现者 & 现实扭曲工程师</p>
+                                </div>
+                                
+                                <div class="text-center mt-50">
+                                    <a href="index.html#contact" class="cosmic-button">加入我们的宇宙实验</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- manifesto-area-end -->
+        </main>
+        <!-- main-area-end -->
+
+        <!-- footer -->
+        <footer class="footer-bg footer-p">
+            <div class="footer-top p-relative fix">
+               
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-sm-12 text-center">
+                               <div class="section-title p-relative mb-50 wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                                 <div class="f-logo">
+                                      <img src="img/logo/logo.png" alt="img">
+                                </div>
+                                <p>"每一个不想上班的清晨，都是觉醒的试炼。我们相信一切皆虚构，但我们认真地编。"</p>
+                            </div>
+                             <div class="footer-social mt-10 mb-120 wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s"> 
+                                    <a href="#"><i class="fab fa-rocket"></i></a>
+                                    <a href="#"><i class="fab fa-meteor"></i></a>
+                                    <a href="#"><i class="fab fa-space-shuttle"></i></a>
+                                    <a href="#"><i class="fab fa-galactic-republic"></i></a>
+                                </div>    
+                           
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="copyright-wrap">
+                <div class="container">
+                    <div class="row align-items-center">                       
+                        <div class="col-lg-6">
+                          <div class="copy-text">
+                                 © 2025 郝鑫星际管理集团 - 本公司已与现实脱钩     
+                            </div>
+                        </div>                       
+                       <div class="col-lg-6 text-right text-xl-right">
+                           <ul>
+                               <li><a href="#" class="hover-text" title="你真闲，居然看页脚">星际职位</a></li>
+                               <li><a href="#">灵魂退款政策</a></li>
+                               <li><a href="#">宇宙洞察</a></li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html> 
